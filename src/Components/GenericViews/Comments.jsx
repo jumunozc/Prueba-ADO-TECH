@@ -23,10 +23,9 @@ const Comments = () => {
   return (
     <Card style={{ background: '#FFF' }}>
       {(xs || sm) && (!md && !lg) ?
-        <>
+        <div>
           <Grid container >
             <Grid item xs={12} sm={12}>
-
               <Card style={{ height: 650, width: '100%', background: '#FFF' }}>
                 <DataGrid
                   rows={comments}
@@ -43,7 +42,7 @@ const Comments = () => {
               </Card>
             </Grid>
           </Grid>
-        </>
+        </div>
 
         : (xs && sm) && (md || lg) ?
           <div style={{ width: "1800px" }}>

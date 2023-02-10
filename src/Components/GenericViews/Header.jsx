@@ -39,12 +39,48 @@ const Header = (props) => {
     };
 
     let routes = [
-        { name: 'Usuarios', route: 'vw_Users', icon: <AccountCircle sx={{ color: '#4b64ca' }} /> },
-        { name: 'Posts', route: 'vw_Post', icon: <ArticleIcon sx={{ color: '#4b64ca' }} /> },
-        { name: 'Comentarios', route: 'vw_Comments', icon: <CommentIcon sx={{ color: '#4b64ca' }} /> },
-        { name: 'Albums', route: 'vw_Album', icon: <AlbumIcon sx={{ color: '#4b64ca' }} /> },
-        { name: 'Fotos', route: 'vw_Photos', icon: <PanoramaIcon sx={{ color: '#4b64ca' }} /> },
-        { name: 'Tareas', route: 'vw_Todos', icon: <AddTaskIcon sx={{ color: '#4b64ca' }} /> }
+        {
+            name: 'Usuarios', route: 'vw_Users', icon: <AccountCircle sx={{
+                color: '#4b64ca', '&:hover': {
+                    color: '#FFF'
+                }
+            }} />
+        },
+        {
+            name: 'Posts', route: 'vw_Post', icon: <ArticleIcon sx={{
+                color: '#4b64ca', '&:hover': {
+                    color: '#FFF'
+                }
+            }} />
+        },
+        {
+            name: 'Comentarios', route: 'vw_Comments', icon: <CommentIcon sx={{
+                color: '#4b64ca', '&:hover': {
+                    color: '#FFF'
+                }
+            }} />
+        },
+        {
+            name: 'Albums', route: 'vw_Album', icon: <AlbumIcon sx={{
+                color: '#4b64ca', '&:hover': {
+                    color: '#FFF'
+                }
+            }} />
+        },
+        {
+            name: 'Fotos', route: 'vw_Photos', icon: <PanoramaIcon sx={{
+                color: '#4b64ca', '&:hover': {
+                    color: '#FFF'
+                }
+            }} />
+        },
+        {
+            name: 'Tareas', route: 'vw_Todos', icon: <AddTaskIcon sx={{
+                color: '#4b64ca', '&:hover': {
+                    color: '#FFF'
+                }
+            }} />
+        }
     ]
     function Logout() {
         sessionStorage.clear()
@@ -152,10 +188,8 @@ const Header = (props) => {
         return <SpecificStory story={props.story} />;
     }
     const style = {
-        background: "##EEE",
-        backgroundSize: "400% 400%",
-        animation: "gradient 10s ease infinite",
-        marginTop: '50px',
+
+        marginTop: '20px',
         marginLeft: '5px'
     }
     let titulo = ''
@@ -199,7 +233,7 @@ const Header = (props) => {
                                 }}>
                                 <MenuIcon sx={{ color: '#4b64ca' }} />
                             </IconButton>
-                            <Typography sx={{ color: 'black' }}>{titulo}</Typography>
+                            <Typography sx={{ color: 'black', fontWeight: 'bold',fontSize:'20px' }}>{titulo}</Typography>
                             <IconButton
                                 color="inherit"
                                 aria-label="open drawer"
@@ -218,7 +252,7 @@ const Header = (props) => {
                         <Stack direction="row" spacing={1} alignItems="center">
                             <AccountCircle sx={{ color: '#4b64ca' }} />
                             <Divider orientation='vertical' sx={{ background: '#FFF' }} />
-                            <Typography sx={{ color: 'black', float: 'right' }}>Bienvenido/a {props.user}</Typography>
+                            <Typography sx={{ color: 'black', float: 'right', fontWeight: 'bold',fontSize:'20px' }}>Bienvenido/a {props.user}</Typography>
                         </Stack>
                     </Box>
                 </Toolbar>
@@ -239,8 +273,8 @@ const Header = (props) => {
                                 color: '#FFF',
                             }
                         }}>
-                            <ListItemButton onClick={() => setVista(items.route)}>
-                                <ListItemIcon>
+                            <ListItemButton onClick={() => setVista(items.route)} >
+                                <ListItemIcon >
                                     {items.icon}
                                 </ListItemIcon>
                                 <ListItemText>{items.name}</ListItemText>
@@ -250,10 +284,19 @@ const Header = (props) => {
                 </List>
                 <Divider />
                 <List>
-                    <ListItem disablePadding>
+                    <ListItem disablePadding sx={{
+                        '&:hover': {
+                            backgroundColor: '#263686',
+                            color: '#FFF',
+                        }
+                    }}>
                         <ListItemButton onClick={() => Logout()}>
                             <ListItemIcon>
-                                <LogoutIcon sx={{ color: '#4b64ca' }} />
+                                <LogoutIcon sx={{
+                                    color: '#4b64ca', '&:hover': {
+                                        color: '#FFF'
+                                    }
+                                }} />
                             </ListItemIcon>
                             <ListItemText>Logout</ListItemText>
                         </ListItemButton>

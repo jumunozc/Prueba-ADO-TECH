@@ -95,9 +95,6 @@ function App() {
     <Card sx={{ background: '#FFF' }}>
       {(xs || sm) && (!md && !lg) ?
         <div>
-          <Typography variant='h4' sx={{ textAlign: 'left', padding: '5px', color: '#EEE' }}>
-            Resumen de usuarios
-          </Typography>
           <Grid container >
             <Grid item xs={12} sm={12}>
               <Grid container>
