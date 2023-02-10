@@ -99,7 +99,7 @@ function App() {
             <Grid item xs={12} sm={12}>
               <Grid container>
                 <Grid item xs={12} sm={12} sx={{ padding: '5px' }}>
-                  <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
+                  <Paper style={{ maxHeight: 200, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
                     <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Tareas de usuarios</Typography>
                     {users.map((item, key) => (
@@ -136,7 +136,7 @@ function App() {
                   </Paper>
                 </Grid>
                 <Grid item xs={12} sm={12} sx={{ padding: '30px 5px 5px 5px', }}>
-                  <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
+                  <Paper style={{ maxHeight: 200, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
                     <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Albums de usuarios</Typography>
                     {users.map((item, key) => (
@@ -162,7 +162,7 @@ function App() {
                   </Paper>
                 </Grid>
                 <Grid item xs={12} sm={12} sx={{ padding: '30px 5px 5px 5px', }}>
-                  <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
+                  <Paper style={{ maxHeight: 200, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
                     <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Posts de usuarios</Typography>
                     {users.map((item, key) => (
@@ -225,9 +225,9 @@ function App() {
               <Grid item md={3} lg={3}>
                 <Grid container>
                   <Grid item md={12} lg={12} sx={{ padding: '5px' }}>
-                    <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
+                    <Paper style={{ maxHeight: 200, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Tareas de usuarios</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder', background:'#4b64ca',color:'#FFF' }}>Tareas de usuarios</Typography>
                       {users.map((item, key) => (
                         <Accordion key={key}>
                           <AccordionSummary onClick={() => Todos(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -262,9 +262,9 @@ function App() {
                     </Paper>
                   </Grid>
                   <Grid item md={12} lg={12} sx={{ padding: '30px 5px 5px 5px', }}>
-                    <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
+                    <Paper style={{ maxHeight: 200, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Albums de usuarios</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder', background:'#4b64ca',color:'#FFF' }}>Albums de usuarios</Typography>
                       {users.map((item, key) => (
                         <Accordion>
                           <AccordionSummary onClick={() => GetAlbums(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -288,9 +288,9 @@ function App() {
                     </Paper>
                   </Grid>
                   <Grid item md={12} lg={12} sx={{ padding: '30px 5px 5px 5px', }}>
-                    <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
+                    <Paper style={{ maxHeight: 200, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Posts de usuarios</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder', background:'#4b64ca',color:'#FFF' }}>Posts de usuarios</Typography>
                       {users.map((item, key) => (
                         <Accordion>
                           <AccordionSummary onClick={() => Posts(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -326,7 +326,7 @@ function App() {
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item md={9} lg={9} sx={{ padding: '5px' }}>
+              <Grid item md={9} lg={9} sx={{ padding: '5px 5px 0px 10px' }}>
                 <Card sx={{ height: 670, width: '100%', background: '#EEE' }}>
                   <DataGrid
                     rows={users}

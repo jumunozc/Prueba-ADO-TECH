@@ -54,14 +54,14 @@ const Header = (props) => {
             }} />
         },
         {
-            name: 'Comentarios', route: 'vw_Comments', icon: <CommentIcon sx={{
+            name: 'Albums', route: 'vw_Album', icon: <AlbumIcon sx={{
                 color: '#4b64ca', '&:hover': {
                     color: '#FFF'
                 }
             }} />
         },
         {
-            name: 'Albums', route: 'vw_Album', icon: <AlbumIcon sx={{
+            name: 'Comentarios', route: 'vw_Comments', icon: <CommentIcon sx={{
                 color: '#4b64ca', '&:hover': {
                     color: '#FFF'
                 }
@@ -286,7 +286,7 @@ const Header = (props) => {
                 <List>
                     <ListItem disablePadding sx={{
                         '&:hover': {
-                            backgroundColor: '#263686',
+                            backgroundColor: '#4b64ca',
                             color: '#FFF',
                         }
                     }}>

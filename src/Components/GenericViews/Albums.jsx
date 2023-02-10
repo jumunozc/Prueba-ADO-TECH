@@ -46,10 +46,10 @@ const Albums = () => {
           <Grid container >
             <Grid item xs={12} sm={12}>
               <Grid container>
-                <Grid item xs={12} sm={12} sx={{ padding: '5px' }}>
-                  <Paper style={{ maxHeight: 600, overflow: 'auto' }}>
+                <Grid item xs={12} sm={12} sx={{ padding: '5px 5px 0px 10px' }}>
+                  <Paper style={{ maxHeight: 600, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
-                    <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Fotos de cada album</Typography>
+                    <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder', background:'#4b64ca',color:'#FFF' }}>Fotos de cada album</Typography>
                     {albums.map((item, key) => (
                       <Accordion key={key}>
                         <AccordionSummary onClick={() => GetPhotos(item.userId)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.title}</AccordionSummary>
@@ -110,10 +110,10 @@ const Albums = () => {
             <Grid container >
               <Grid item md={5} lg={5}>
                 <Grid container>
-                  <Grid item md={12} lg={12} sx={{ padding: '5px' }}>
-                    <Paper style={{ maxHeight: 600, overflow: 'auto' }}>
+                  <Grid item md={12} lg={12} sx={{ padding: '5px 5px 0px 10px' }}>
+                    <Paper style={{ maxHeight: 660, overflow: 'auto', boxShadow: '3px 3px 3px 3px grey' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Fotos de cada album</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder', background:'#4b64ca',color:'#FFF' }}>Fotos de cada album</Typography>
                       {albums.map((item, key) => (
                         <Accordion key={key}>
                           <AccordionSummary onClick={() => GetPhotos(item.userId)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.title}</AccordionSummary>
