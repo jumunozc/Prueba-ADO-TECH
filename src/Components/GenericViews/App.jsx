@@ -92,10 +92,10 @@ function App() {
   ];
 
   return (
-    <Card sx={{ background: '#0E0E0E' }}>
+    <Card sx={{ background: '#FFF' }}>
       {(xs || sm) && (!md && !lg) ?
-        <>
-          <Typography variant='h4' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', color: '#EEE', fontStyle: 'italic' }}>
+        <div>
+          <Typography variant='h4' sx={{ textAlign: 'left', padding: '5px', color: '#EEE' }}>
             Resumen de usuarios
           </Typography>
           <Grid container >
@@ -104,7 +104,7 @@ function App() {
                 <Grid item xs={12} sm={12} sx={{ padding: '5px' }}>
                   <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
 
-                    <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontStyle: 'italic', fontWeight: 'bolder' }}>Tareas de usuarios</Typography>
+                    <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Tareas de usuarios</Typography>
                     {users.map((item, key) => (
                       <Accordion key={key}>
                         <AccordionSummary onClick={() => Todos(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -141,7 +141,7 @@ function App() {
                 <Grid item xs={12} sm={12} sx={{ padding: '30px 5px 5px 5px', }}>
                   <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
 
-                    <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontWeight: 'bolder', fontStyle: 'italic' }}>Albums de usuarios</Typography>
+                    <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Albums de usuarios</Typography>
                     {users.map((item, key) => (
                       <Accordion>
                         <AccordionSummary onClick={() => GetAlbums(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -167,7 +167,7 @@ function App() {
                 <Grid item xs={12} sm={12} sx={{ padding: '30px 5px 5px 5px', }}>
                   <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
 
-                    <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontWeight: 'bolder', fontStyle: 'italic' }}>Posts de usuarios</Typography>
+                    <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Posts de usuarios</Typography>
                     {users.map((item, key) => (
                       <Accordion>
                         <AccordionSummary onClick={() => Posts(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -211,29 +211,26 @@ function App() {
                   pageSize={10}
                   rowsPerPageOptions={[usersCount]}
                   sx={{
-                      
-                    '& .MuiDataGrid-columnHeaders': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                    '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                    '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF'},
+
+                    '& .MuiDataGrid-columnHeaders': { color: '#FFF', background: '#4b64ca' },
+                    '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF', background: '#4b64ca' },
+                    '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF' },
                   }}
                 />
               </Card>
             </Grid>
           </Grid>
-        </>
+        </div>
 
         : (xs && sm) && (md || lg) ?
-          <>
-            <Typography variant='h2' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', color: '#EEE', fontStyle: 'italic' }}>
-              Resumen de usuarios
-            </Typography>
+          <div style={{ width: "1800px" }}>
             <Grid container >
               <Grid item md={3} lg={3}>
                 <Grid container>
                   <Grid item md={12} lg={12} sx={{ padding: '5px' }}>
                     <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontStyle: 'italic', fontWeight: 'bolder' }}>Tareas de usuarios</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Tareas de usuarios</Typography>
                       {users.map((item, key) => (
                         <Accordion key={key}>
                           <AccordionSummary onClick={() => Todos(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -270,7 +267,7 @@ function App() {
                   <Grid item md={12} lg={12} sx={{ padding: '30px 5px 5px 5px', }}>
                     <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontWeight: 'bolder', fontStyle: 'italic' }}>Albums de usuarios</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Albums de usuarios</Typography>
                       {users.map((item, key) => (
                         <Accordion>
                           <AccordionSummary onClick={() => GetAlbums(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -296,7 +293,7 @@ function App() {
                   <Grid item md={12} lg={12} sx={{ padding: '30px 5px 5px 5px', }}>
                     <Paper style={{ maxHeight: 200, overflow: 'auto' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontWeight: 'bolder', fontStyle: 'italic' }}>Posts de usuarios</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Posts de usuarios</Typography>
                       {users.map((item, key) => (
                         <Accordion>
                           <AccordionSummary onClick={() => Posts(item.id)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.name}</AccordionSummary>
@@ -340,16 +337,22 @@ function App() {
                     pageSize={10}
                     rowsPerPageOptions={[usersCount]}
                     sx={{
-                      
-                      '& .MuiDataGrid-columnHeaders': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                      '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                      '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF'},
+
+                      '& .MuiDataGrid-columnHeaders': { color: '#FFF', background: '#4b64ca' },
+                      '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF', background: '#4b64ca' },
+                      '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF' },
+                      '& .MuiDataGrid-row': {
+                        '&:hover': {
+                          backgroundColor: '#263686',
+                          color: '#FFF',
+                        }
+                      },
                     }}
                   />
                 </Card>
               </Grid>
             </Grid>
-          </>
+          </div>
           :
           null
       }

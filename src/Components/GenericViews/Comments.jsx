@@ -21,12 +21,9 @@ const Comments = () => {
     { field: 'body', headerName: 'Texto', width: 1500 }
   ];
   return (
-    <Card style={{ background: '#0E0E0E' }}>
+    <Card style={{ background: '#FFF' }}>
       {(xs || sm) && (!md && !lg) ?
         <>
-          <Typography variant='h4' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', color: '#EEE', fontStyle: 'italic' }}>
-            Resumen de comentarios
-          </Typography>
           <Grid container >
             <Grid item xs={12} sm={12}>
 
@@ -38,8 +35,8 @@ const Comments = () => {
                   rowsPerPageOptions={[commentsCount]}
                   sx={{
 
-                    '& .MuiDataGrid-columnHeaders': { color: '#FFF', background: 'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                    '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF', background: 'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
+                    '& .MuiDataGrid-columnHeaders': {color: '#FFF', background: '#4b64ca' },
+                    '& .css-17jjc08-MuiDataGrid-footerContainer': {color: '#FFF', background: '#4b64ca' },
                     '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF' },
                   }}
                 />
@@ -49,10 +46,7 @@ const Comments = () => {
         </>
 
         : (xs && sm) && (md || lg) ?
-          <>
-            <Typography variant='h2' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', color: '#EEE', fontStyle: 'italic' }}>
-              Resumen de comentarios
-            </Typography>
+          <div style={{ width: "1800px" }}>
             <Grid container >
               <Grid item md={12} lg={12}>
 
@@ -64,15 +58,15 @@ const Comments = () => {
                     rowsPerPageOptions={[commentsCount]}
                     sx={{
 
-                      '& .MuiDataGrid-columnHeaders': { color: '#FFF', background: 'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                      '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF', background: 'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
+                      '& .MuiDataGrid-columnHeaders': {color: '#FFF', background: '#4b64ca' },
+                      '& .css-17jjc08-MuiDataGrid-footerContainer': {color: '#FFF', background: '#4b64ca' },
                       '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF' },
                     }}
                   />
                 </Card>
               </Grid>
             </Grid>
-          </>
+          </div>
           :
           null
       }

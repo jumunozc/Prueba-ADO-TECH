@@ -39,11 +39,11 @@ const Albums = () => {
     { field: 'title', headerName: 'Titulo', width: 500 }
   ];
   return (
-    <Card sx={{ background: '#0E0E0E' }}>
+    <Card sx={{ background: '#FFF' }}>
 
       {(xs || sm) && (!md && !lg) ?
-        <>
-          <Typography variant='h4' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', color: '#EEE', fontStyle: 'italic' }}>
+        <div >
+          <Typography variant='h4' sx={{ textAlign: 'left', padding: '5px', color: '#EEE' }}>
             Resumen de Albums
           </Typography>
           <Grid container >
@@ -52,7 +52,7 @@ const Albums = () => {
                 <Grid item xs={12} sm={12} sx={{ padding: '5px' }}>
                   <Paper style={{ maxHeight: 600, overflow: 'auto' }}>
 
-                    <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontStyle: 'italic', fontWeight: 'bolder' }}>Fotos de cada album</Typography>
+                    <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Fotos de cada album</Typography>
                     {albums.map((item, key) => (
                       <Accordion key={key}>
                         <AccordionSummary onClick={() => GetPhotos(item.userId)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.title}</AccordionSummary>
@@ -97,29 +97,26 @@ const Albums = () => {
                   pageSize={10}
                   rowsPerPageOptions={[albumsCount]}
                   sx={{
-                      
-                    '& .MuiDataGrid-columnHeaders': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                    '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                    '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF'},
+
+                    '& .MuiDataGrid-columnHeaders': {color: '#FFF', background: '#4b64ca' },
+                    '& .css-17jjc08-MuiDataGrid-footerContainer': {color: '#FFF', background: '#4b64ca' },
+                    '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF' },
                   }}
                 />
               </Card>
             </Grid>
           </Grid>
-        </>
+        </div>
 
         : (xs && sm) && (md || lg) ?
-          <>
-            <Typography variant='h2' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', color: '#EEE', fontStyle: 'italic' }}>
-              Resumen de Albums
-            </Typography>
+          <div style={{ width: "1800px" }}>
             <Grid container >
               <Grid item md={5} lg={5}>
                 <Grid container>
                   <Grid item md={12} lg={12} sx={{ padding: '5px' }}>
                     <Paper style={{ maxHeight: 600, overflow: 'auto' }}>
 
-                      <Typography variant='h6' sx={{ textAlign: 'left', fontFamily: "'Poppins'", padding: '5px', fontStyle: 'italic', fontWeight: 'bolder' }}>Fotos de cada album</Typography>
+                      <Typography variant='h6' sx={{ textAlign: 'left', padding: '5px', fontWeight: 'bolder' }}>Fotos de cada album</Typography>
                       {albums.map((item, key) => (
                         <Accordion key={key}>
                           <AccordionSummary onClick={() => GetPhotos(item.userId)} expandIcon={<ExpandMoreIcon sx={{ color: '#4b64ca' }} />}>{item.title}</AccordionSummary>
@@ -164,16 +161,16 @@ const Albums = () => {
                     pageSize={10}
                     rowsPerPageOptions={[albumsCount]}
                     sx={{
-                      
-                      '& .MuiDataGrid-columnHeaders': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)'},
-                      '& .css-17jjc08-MuiDataGrid-footerContainer': { color: '#FFF',background:'linear-gradient(90deg, rgba(17,17,19,1) 44%, rgba(217,216,232,1) 91%)' },
-                      '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF'},
+
+                      '& .MuiDataGrid-columnHeaders': {color: '#FFF', background: '#4b64ca' },
+                      '& .css-17jjc08-MuiDataGrid-footerContainer': {color: '#FFF', background: '#4b64ca' },
+                      '& .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar': { color: '#FFF' },
                     }}
                   />
                 </Card>
               </Grid>
             </Grid>
-          </>
+          </div>
           :
           null
       }
